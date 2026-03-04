@@ -5,7 +5,7 @@ int main() {
     int n;
 
     // Baca baris pertama (jumlah baris masukan berikutnya)
-    printf("Masukkan jumlah baris masukan berikutnya (n): ");
+    // Tanpa prompt, sesuai instruksi terbaru
     if (scanf("%d", &n) != 1) {
         fprintf(stderr, "Input tidak valid. Harap masukkan bilangan bulat positif untuk n.\n");
         return 1; // Keluar dengan kode error
@@ -21,11 +21,8 @@ int main() {
     int max_val = INT_MIN; // Inisialisasi dengan nilai minimum integer
     int current_val;
 
-    printf("Masukkan %d bilangan bulat antara -100 dan 100:\n", n);
-
-    // Baca n baris masukan berikutnya
+    // Baca n baris masukan berikutnya tanpa prompt
     for (int i = 0; i < n; i++) {
-        printf("Masukkan bilangan ke-%d: ", i + 1);
         if (scanf("%d", &current_val) != 1) {
             fprintf(stderr, "Input tidak valid. Harap masukkan bilangan bulat.\n");
             return 1; // Keluar dengan kode error

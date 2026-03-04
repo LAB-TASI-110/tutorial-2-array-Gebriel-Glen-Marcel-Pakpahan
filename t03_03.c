@@ -6,8 +6,7 @@ int main() {
     int n;
 
     // Baca baris pertama (jumlah baris masukan berikutnya)
-    // Tidak ada prompt di sini karena umumnya input n diberikan terlebih dahulu dalam format script/pipeline,
-    // dan permintaan "angka keberapa dimasukkan" lebih merujuk pada input nilai setelah n.
+    // Tanpa prompt, sesuai instruksi terbaru
     if (scanf("%d", &n) != 1) {
         fprintf(stderr, "Input tidak valid. Harap masukkan bilangan bulat positif untuk n.\n");
         return 1; // Keluar dengan kode error
@@ -34,9 +33,8 @@ int main() {
     int prev_val; // Untuk menyimpan nilai sebelumnya
     int current_val;
 
-    // Baca n baris masukan berikutnya dengan prompt
+    // Baca n baris masukan berikutnya tanpa prompt
     for (int i = 0; i < n; i++) {
-        printf("Masukkan angka ke-%d: ", i + 1); // Prompt input sesuai permintaan sebelumnya
         if (scanf("%d", &current_val) != 1) {
             fprintf(stderr, "Input tidak valid. Harap masukkan bilangan bulat.\n");
             return 1; // Keluar dengan kode error
